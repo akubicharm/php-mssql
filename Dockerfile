@@ -27,7 +27,7 @@ RUN yum install -y centos-release-scl && \
 
 # Install freetds
 RUN yum install -y epel-release
-RUN yum install freetds freetds-devel
+RUN yum install -y freetds freetds-devel
 
 # Copy the S2I scripts from the specific language image to $STI_SCRIPTS_PATH
 COPY ./s2i/bin/ $STI_SCRIPTS_PATH
