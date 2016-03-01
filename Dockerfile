@@ -29,4 +29,5 @@ RUN yum install -y centos-release-scl && \
 RUN yum install -y epel-release
 RUN yum install -y freetds freetds-devel
 
-USER 1001
+#USER 1001
+USER default
