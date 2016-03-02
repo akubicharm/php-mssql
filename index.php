@@ -1,10 +1,13 @@
 <?php
 echo "<h1>Connect MSSql Server on Azure by FreeTDS</h1>"
 
-// get environment variables
-$user = 'myadmin'; //getenv("DB_USER");
-$pass = '@Dmin123'; // getenv("DB_PASSWD");
-$host = 'db-komizo.database.windows.net';  //getenv("DB_SERVER_HOST");
+# getenv("DB_USER");
+# getenv("DB_PASSWD");
+# getenv("DB_SERVER_HOST");
+
+$user = 'myadmin';
+$pass = '@Dmin123';
+$host = 'db-komizo.database.windows.net';
 $db = 'sqlserver01';
 $server = $host + '\' + $db;
 
