@@ -23,7 +23,7 @@ else {
 }
 
 # query the users table for all fields 
-$query = "SELECT count(*) FROM SalesLT.customer;
+$query = "SELECT count(*) FROM SalesLT.customer";
 
 # perform the query 
 $result = odbc_exec($connect, $query); 
