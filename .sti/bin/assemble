@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# install freetds-libraries
-yum install -y epel-release
-yum install -y freetds freetds-devel
