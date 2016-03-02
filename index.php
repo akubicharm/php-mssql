@@ -1,15 +1,15 @@
 <?php
-echo "<h1>Connect MSSql Server on Azure by FreeTDS</h1>"
+echo "<h1>Connect MSSql Server on Azure by FreeTDS</h1>";
 
-# getenv("DB_USER");
-# getenv("DB_PASSWD");
-# getenv("DB_SERVER_HOST");
+// getenv("DB_USER")
+// getenv("DB_PASSWD");
+// getenv("DB_SERVER_HOST");
 
 $user = 'myadmin';
 $pass = '@Dmin123';
 $host = 'db-komizo.database.windows.net';
 $db = 'sqlserver01';
-$server = $host + '\' + $db;
+$server = 'db-komizo.database.windows.net\sqlserver01';
 
 // generate connection string
 $connection_string = "DRIVER={SQL Server};SERVER=$server;DATABASE=$database"; 
@@ -31,8 +31,7 @@ $result = odbc_exec($connect, $query);
 # fetch the data from the database 
 while(odbc_fetch_row($result)) { 
     $field1 = odbc_result($result, 1); 
-    $field2 = odbc_result($result, 2); 
-    print("$field1 $field2\n"); 
+    print("$field1\n");
 } 
 
 # close the connection 
