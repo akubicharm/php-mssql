@@ -1,4 +1,4 @@
-FROM openshift/base-centos7
+FROM centos:centos7
 
 # This image provides an Apache+PHP environment for running PHP
 # applications.
@@ -7,13 +7,7 @@ MAINTAINER Kei Omizo
 
 EXPOSE 8080
 
-ENV PHP_VERSION=5.6 \
-    PATH=$PATH:/opt/rh/rh-php56/root/usr/bin
-
-LABEL io.k8s.description="Platform for building and running PHP 5.6 applications with freeTDS" \
-      io.k8s.display-name="Apache 2.4 with PHP 5.6" \
-      io.openshift.expose-services="8080:http" \
-      io.openshift.tags="builder,php,php56,rh-php56"
+ENV PHP_VERSION=5.6
 
 # Install Apache httpd and PHP
 RUN yum install -y centos-release-scl && \
@@ -29,5 +23,4 @@ RUN yum install -y centos-release-scl && \
 RUN yum install -y epel-release
 RUN yum install -y freetds freetds-devel
 
-#USER 1001
 USER default
